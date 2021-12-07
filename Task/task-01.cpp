@@ -10,7 +10,7 @@ class A {
 	}
 };
 
-class B :  public A{
+class B : virtual public A{
     public:
 	void display1()
 	{
@@ -18,7 +18,7 @@ class B :  public A{
 	}
 };
 
-class C :  public A{
+class C : virtual public A{
 	public:
 	void display2()
 	{
@@ -41,7 +41,7 @@ int main(){
     d.display1();
     d.display2();
     d.display3();
-    d.display(); //member display was ambiguous
-    d.k = 10;
+    d.display();
+    d.k = 10;       //member display was ambiguous
     return 0;
 }
